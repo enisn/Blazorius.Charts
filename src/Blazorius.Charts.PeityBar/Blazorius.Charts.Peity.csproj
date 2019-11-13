@@ -5,7 +5,7 @@
     <RazorLangVersion>3.0</RazorLangVersion>
     <Authors>Mobiroller</Authors>
     <Description>Peity implementation for Blazorius.Charts</Description>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
     <PackageIcon>Blazorius_512.png</PackageIcon>
     <PackageIconUrl />
   </PropertyGroup>
