@@ -1,0 +1,38 @@
+﻿@using Blazorius.Charts.Peity.Services
+@using Blazorius.Charts.Peity.Models
+@using System.Text.Json
+
+@inject IPeityInterop PeityInterop
+
+<div>
+    <span class="blazorius-peity-bar">@string.Join(",", Data)</span>
+</div>
+
+@code {
+
+    private int[] data;
+    [Parameter]
+    public int[] Data
+    {
+        get => data;
+        set
+        {
+            data = value;
+            StateHasChanged();
+        }
+    }
+
+    [Parameter]
+    public BarChartOptions Options { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+        await UpdateViewAsync();
+    }
+
+    public virtual async Task UpdateViewAsync()
+    {
+        await PeityInterop.InitBarAsync(".blazorius-peity-bar", Options);
+    }
+}

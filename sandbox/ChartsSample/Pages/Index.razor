@@ -1,0 +1,22 @@
+﻿@page "/"
+
+@using Blazorius.Charts.Peity.Components
+@using Blazorius.Charts.Peity.Models
+
+<BarChart Data="@data" Options="@options" />
+
+@code {
+
+    BarChartOptions options = new BarChartOptions
+      {
+        Width = 180,
+        Height = 40,
+        Fill = new[] { "#ff8589" },
+        Padding = 0.1f
+    };
+
+    int[] data = new int[]
+    {
+        5,10,3,8,3,16,6,7,4,6,4,9,1,5,6
+    };
+}
