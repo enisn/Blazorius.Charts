@@ -1,3 +1,6 @@
+
+<img width="25%" src="https://github.com/enisn/Blazorius.Charts/blob/master/content/Blazorius_512.png?raw=true"/>
+
 # Blazorius.Charts
 
 This library includes chart implementations for Blazor.
@@ -20,8 +23,8 @@ public void ConfigureServices(IServiceCollection services)
 {
     services.AddPeityCharts(); // <--- Add this line
 }
-```**
-**
+```
+
 - That's it! Ready to use.
 
 # Usage
@@ -46,26 +49,56 @@ public void ConfigureServices(IServiceCollection services)
 
 - You can set some options like that:
 
-```html
+```razor
 @page "/Chart"
 
 @using  Blazorius.Charts.Peity.Components
-@using  Blazorius.Charts.Peity.Models
 
-<BarChart Data="@data" Options="@options" />
+<BarChart Data="@data" Width="720" Padding="0.1" Color="#ff7300" />
 
 @code {
-
-    BarChartOptions options = new BarChartOptions
-    {
-        Fill = new[] { "#ff7300" },
-        Width = 720,
-        Padding = 0.1f,
-    };
 
     int[] data = new int[]
     {
         5,10,3,8,3,16,6,7
+    };
+}
+```
+
+# Sample
+
+<img src="https://github.com/enisn/Blazorius.Charts/blob/master/content/ScreenShot_00.png?raw=true"/>
+
+
+```razor
+@page "/"
+
+@using Blazorius.Charts.Peity.Components
+
+<BarChart Data="data" Width="180" Height="40" Fill="colors" Padding=".1f"/>
+
+<hr />
+
+<PieChart Data="data"  Width="180" Height="180" Fill="colors" />
+
+<hr />
+
+<DonutChart Data="data"  Width="180" Height="180" Fill="colors"/>
+
+<hr />
+
+<LineChart Data="data"  Width="180" Height="180" Color="#ff7300" StrokeColor="#ffc89c" />
+
+<hr />
+
+
+@code {
+
+    string[] colors = new[] { "#ff7300", "#ffc89c" };
+
+    int[] data = new int[]
+    {
+        5,10,3,8,3,16,6,7,4,6,4,9,1,5,6
     };
 }
 ```
