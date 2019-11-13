@@ -3,13 +3,13 @@
 
 # Blazorius.Charts
 
-This library includes chart implementations for Blazor.
+This library includes chart implementations for Blazor. So this library listens changes over `INotifyPropertyChanged` and `INotifyCollectionChanged`. So you just update your data ObservableCollection, and chart will be updated automaticly!
 
 # Support
 
 | Package | Implementation | NuGet |
 | --- | --- | --- |
-| Blazorius.Charts | _Abstractiýons_ |  ![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Blazorius.Charts?logo=nuget) |
+| Blazorius.Charts | _AbstractiÃ½ons_ |  ![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Blazorius.Charts?logo=nuget) |
 | Blazorius.Charts.Peity | [benpickles/peity](https://github.com/benpickles/peity) |  ![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Blazorius.Charts.Peity?logo=nuget) |
 
 # Installation
