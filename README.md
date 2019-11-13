@@ -18,7 +18,7 @@ This library includes chart implementations for Blazor.
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
-    services.AddPeityBar(); // <--- Add this line
+    services.AddPeityCharts(); // <--- Add this line
 }
 ```**
 **
@@ -59,7 +59,8 @@ public void ConfigureServices(IServiceCollection services)
     BarChartOptions options = new BarChartOptions
     {
         Fill = new[] { "#ff7300" },
-        Width = 720
+        Width = 720,
+        Padding = 0.1f,
     };
 
     int[] data = new int[]
