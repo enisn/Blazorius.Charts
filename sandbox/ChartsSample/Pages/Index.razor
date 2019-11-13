@@ -1,19 +1,27 @@
 ﻿@page "/"
 
 @using Blazorius.Charts.Peity.Components
-@using Blazorius.Charts.Peity.Models
 
-<BarChart Data="@data" Width="180" Height="40" Color="#ff8589" Padding=".1f"/>
-
-<hr />
-
-<PieChart Data="@data"  Width="180" Height="180" Color="#ff7300" InnerRadius="20" />
+<BarChart Data="data" Width="180" Height="40" Fill="colors" Padding=".1f"/>
 
 <hr />
 
-<BarChart Data="@data"  Width="180" Height="180" Color="#ff7300" />
+<PieChart Data="data"  Width="180" Height="180" Fill="colors" />
+
+<hr />
+
+<DonutChart Data="data"  Width="180" Height="180" Fill="colors"/>
+
+<hr />
+
+<LineChart Data="data"  Width="180" Height="180" Color="#ff7300" StrokeColor="#ffc89c" />
+
+<hr />
+
 
 @code {
+
+    string[] colors = new[] { "#ff7300", "#ffc89c" };
 
     int[] data = new int[]
     {

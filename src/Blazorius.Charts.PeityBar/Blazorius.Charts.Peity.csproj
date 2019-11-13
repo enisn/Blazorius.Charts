@@ -6,6 +6,8 @@
     <Authors>Mobiroller</Authors>
     <Description>Peity implementation for Blazorius.Charts</Description>
     <Version>1.0.1</Version>
+    <PackageIcon>Blazorius_512.png</PackageIcon>
+    <PackageIconUrl />
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,6 +24,10 @@
   <ItemGroup>
     <None Remove="content\jquery-peity.min.js" />
     <None Remove="content\peity-interop.js" />
+    <None Include="..\..\content\Blazorius_512.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 

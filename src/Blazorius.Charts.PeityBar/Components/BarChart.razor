@@ -3,13 +3,13 @@
 @inherits ChartComponentBase<BarChartOptions>
 
 <div>
-    <span id="@Id">@string.Join(",", Data)</span>
+    <span id="@Id">@string.Join(Options.Delimiter, Data)</span>
 </div>
 
 @code {
     public override ChartType Type => ChartType.Bar;
 
     [Parameter] public float? Padding { get => Options.Padding; set => Options.Padding = value; }
-    [Parameter] public int? Min { get => Options.Min; set => Options.Min = value; }
-    [Parameter] public int? Max { get => Options.Max; set => Options.Max = value; }
+    [Parameter] public double? Min { get => Options.Min; set => Options.Min = value; }
+    [Parameter] public double? Max { get => Options.Max; set => Options.Max = value; }
 }

@@ -1,14 +1,15 @@
 ﻿@using Blazorius.Charts.Peity.Models
 
-@inherits ChartComponentBase<PieChartOptions>
+@inherits ChartComponentBase<DonutChartOptions>
 
 <div>
     <span id="@Id">@string.Join(Options.Delimiter, Data)</span>
 </div>
 
 @code {
-    public override ChartType Type => ChartType.Pie;
+    public override ChartType Type => ChartType.Donut;
 
     [Parameter] public double? Radius { get => Options.Radius; set => Options.Radius = value; }
+    [Parameter] public double? InnerRadius { get => Options.InnerRadius; set => Options.InnerRadius = value; }
 }
 

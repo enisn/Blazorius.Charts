@@ -2,11 +2,8 @@
 {
     public class PieChartOptions : OptionsBase
     {
-        private float? radius;
-        private float? innerRadius;
+        private double? radius;
 
-        public float? Radius { get => radius; set => SetProperty(ref radius, value); }
-
-        public float? InnerRadius { get => innerRadius; set => SetProperty(ref innerRadius, value); }
+        public double? Radius { get => radius; set => SetProperty(ref radius, value); }
     }
 }
